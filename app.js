@@ -24,7 +24,7 @@
         };
     });
     
-      app.controller('ReviewController', function(){
+    app.controller('ReviewController', function(){
         this.review = {};
         this.addReview = function(product) {
             this.review.createdOn = Date.now();
@@ -33,6 +33,28 @@
             this.review = {};
         };
     });
+    
+    app.directive('productDescriptions', function() {
+        return {
+            restrict: 'E',
+            templateUrl: "product-descriptions.html"
+        };
+    });
+    
+    app.directive('productSpecs', function() {
+        return {
+            restrict: 'A',
+            templateUrl: "product-specs.html"
+        };
+    });
+    
+    app.directive('productReviews', function() {
+        return {
+            restrict: 'E',
+            templateUrl: "product-reviews.html"
+        };
+    });
+    
     
     var gems = [{
         name: 'Azurite',
